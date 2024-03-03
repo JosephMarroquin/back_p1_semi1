@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NAME_DATABASE = exports.PASSWORD_DATABASE = exports.USERNAME_DATABASE = exports.PORT_DATABASE = exports.HOST_DATABASE = exports.AWS_SECRET_KEY = exports.AWS_PUBLIC_KEY = exports.AWS_BUCKET_REGION = exports.AWS_BUCKET_NAME = void 0;
+const dotenv_1 = require("dotenv");
+(0, dotenv_1.config)();
+exports.AWS_BUCKET_NAME = process.env.AWS_BUCKET_NAME;
+exports.AWS_BUCKET_REGION = process.env.AWS_BUCKET_REGION;
+exports.AWS_PUBLIC_KEY = process.env.AWS_PUBLIC_KEY;
+exports.AWS_SECRET_KEY = process.env.AWS_SECRET_KEY;
+exports.HOST_DATABASE = process.env.HOST_DATABASE;
+exports.PORT_DATABASE = process.env.PORT_DATABASE ? parseInt(process.env.PORT_DATABASE) : undefined;
+exports.USERNAME_DATABASE = process.env.USERNAME_DATABASE;
+exports.PASSWORD_DATABASE = process.env.PASSWORD_DATABASE;
+exports.NAME_DATABASE = process.env.NAME_DATABASE;
